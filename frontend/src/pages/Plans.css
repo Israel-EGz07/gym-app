@@ -1,0 +1,239 @@
+/* Plans Page Styles - Neon Green Theme */
+
+.plans-hero {
+  background: linear-gradient(135deg, #0B0B0B 0%, #1A1A1A 100%);
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+  border-bottom: 1px solid #2A2A2A;
+}
+
+.plans-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+}
+
+.plans-hero p {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.plan-card {
+  background: #1A1A1A;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.05);
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 2px solid #2A2A2A;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.2);
+  border-color: var(--primary);
+}
+
+.plan-card.popular {
+  border-color: var(--primary);
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.15);
+}
+
+.plan-card.popular:hover {
+  transform: scale(1.02) translateY(-8px);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #000000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}
+
+.plan-header {
+  margin-bottom: 1.5rem;
+}
+
+.plan-name {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.plan-description {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.price-currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.price-amount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.price-period {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-left: 0.25rem;
+}
+
+.plan-discount {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.original-price {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+
+.discount-badge {
+  background: #28a745;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+.plan-features li.included {
+  color: var(--text-dark);
+}
+
+.plan-features li.not-included {
+  color: var(--text-light);
+  opacity: 0.6;
+}
+
+.feature-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.plan-features li.included .feature-icon {
+  background: #28a745;
+  color: white;
+}
+
+.plan-features li.not-included .feature-icon {
+  background: #dc3545;
+  color: white;
+}
+
+.plan-footer .btn {
+  margin-top: 1rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: var(--bg-light);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.faq-item {
+  background: #1A1A1A;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.05);
+  border: 1px solid #2A2A2A;
+}
+
+.faq-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.faq-item p {
+  color: var(--text-light);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plans-hero h1 {
+    font-size: 2rem;
+  }
+
+  .plans-hero p {
+    font-size: 1rem;
+  }
+
+  .plan-card.popular {
+    transform: none;
+  }
+
+  .plan-card.popular:hover {
+    transform: translateY(-8px);
+  }
+}
